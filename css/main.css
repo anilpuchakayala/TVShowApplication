@@ -1,0 +1,100 @@
+body{
+  margin:0;
+  padding:0;
+  background-color:#EDEBED;
+  color:#123652;
+}
+.container{
+  width:60%;
+  padding:20px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:15px;
+}
+.subcontainer{
+	margin-top: 120px;
+}
+@media screen and (max-width:850px){
+  .container{
+   width:75%;
+   padding:15px;
+  }
+}
+
+h1{
+  margin:0;
+  margin-bottom: 30px;
+  font-size:25px;
+}
+
+p{
+  margin:15px 0;
+}
+
+.search > input{
+  float:left;
+  width:75%;
+  margin:0;
+  padding:10px 5px;
+  border:none;
+  max-height:40px;
+}
+.search > button{
+  float:right;
+  width:23%;
+  margin:0;
+  padding:10px 15px;
+  background-color:#B3B3B3;
+  color:#fff;
+  font-weight:bold;
+  border:none;
+  max-height:40px;
+}
+
+.episode-list .ratings {
+    line-height: 30px;
+    text-align: center;
+    background-color: #333;
+    color: #FFF;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.episode-list li {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.episode-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.episode-info {
+    list-style: none;
+    margin: 0px;
+    padding: 10px;
+    background-color: #e1e1e1;
+    color: #333;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.episode-info li {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: solid 1px #CCC;
+    line-height: 40px;
+}
+
+.episode-info li:last-child {
+    border-bottom: none;
+}
+.yellowstyle {background-color: yellow;}
+.rounded {
+	border: 2px solid green;
+    border-radius: 5px;
+}

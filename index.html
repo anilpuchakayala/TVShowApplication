@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TV-Show Explorer</title>
+	<!-- include External files here -->
+	 <script src="js/angular.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+
+	<!-- include Application related files goes here  -->
+	<script type="text/javascript" src="js/tv-show-explorer/app.js"></script>
+	<script type="text/javascript" src="js/tv-show-explorer/controllers/mainController.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="TVShowExplorerApp">
+	<div class="container" ng-controller="mainController" ng-init="init()">
+		<h1 class="text-center">TV Show Explorer</h1>
+		<form>
+			<div class="search">
+				<input id="theSearch" ng-model="searchTVShow"
+					placeholder="Please type TVShow name" type="text"/>
+				<button ng-click="TVShowSearch()">Search</button>
+			</div>
+		</form>	
+      <div class="subcontainer">
+            <ul class="episode-list" style="list-style: none;" ng-show="resultshow">
+				<li class="panel panel-default rounded" ng-repeat="tvshow in FinalList">
+					<div class="row-fluid" ng-class="{yellowstyle: tvshow.imdbRating >= 8.5}">
+						<div class="span3">
+						 	<img src="{{tvshow.Poster}}"/>
+							<div class="ratings">
+								<strong>Ratings:</strong> <span class="label"></i> {{tvshow.Rated}}</span> 
+							</div>
+						</div>
+						<div class="span6">
+							<h3>{{tvshow.Title}}</h3>
+							<p>{{tvshow.Plot}}</p>
+						</div>
+						<div class="span3">
+							<ul class="episode-info">
+								<li><strong>Episode number:</strong> {{tvshow.Episode}}</li>
+								<li><strong>Released:</strong> {{getMonth(tvshow.Released)}}</li>
+								<li><strong>ImdbRating:</strong> {{tvshow.imdbRating}}</li>								
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		 <div ng-show="!resultshow">
+		   <p style="font-family:Courier; color:Red; font-size: 20px;">{{error}}</p>
+		 </div>	
+        </div> 
+
+	</div>
+</body>
+</html>
